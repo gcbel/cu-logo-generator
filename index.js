@@ -1,27 +1,30 @@
 /* DEPENDENCIES */
 const inquirer = require('inquirer');
+const colors = require('colors');
+const {writeFile} = require('fs');
+import Shape from './shapes.js';
 
 /* VARIABLES */
 const questions = [
     {
         "type": "input",
-        "message": "What letters would you like on your logo? Input up to 3 letters.",
+        "message": "What letters would you like on your logo? Input up to 3 letters.".magenta,
         "name": "text"
     },
     {
         "type": "input",
-        "message": "What color would you like the logo text to be?",
+        "message": "What color would you like the logo text to be?".magenta,
         "name": "text-color"
     },
     {
         "type": "list",
-        "message": "What shape would you want the background to be?",
+        "message": "What shape would you want the background to be?".magenta,
         "name": "shape",
-        "choices": [circle, square, triangle]
+        "choices": ["Circle", "Square", "Triangle"]
     },
     {
-        "type": "list",
-        "message": "What color would you want the background shape to be?",
+        "type": "input",
+        "message": "What color would you want the background shape to be?".magenta,
         "name": "shape-color"
     }
 ]
@@ -32,8 +35,12 @@ const questions = [
  * @param {string} fileName Name of file to input text
  * @param {object} data Information from user prompts
  */
-function createLogo (responses) {
+function createLogo (filename, responses) {
     console.log(responses)
+
+    const shape = new Circle;
+
+    writeFile(filename, shape.background);
 }
 
 /* INITIALIZERS */
@@ -41,7 +48,7 @@ function createLogo (responses) {
 function init() {
     inquirer
         .prompt(questions)
-        .then((responses) => createLogo(responses));
+        .then((responses) => createLogo("logo.svg", responses));
 }
 
 /* Function call to initialize app */
