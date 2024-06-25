@@ -14,7 +14,8 @@ const questions = [
     {
         "type": "input",
         "message": "What color would you like the logo text to be? Input a keyword or hex code.".magenta,
-        "name": "text_color"
+        "name": "text_color",
+        "default": "white"
     },
     {
         "type": "list",
@@ -25,7 +26,8 @@ const questions = [
     {
         "type": "input",
         "message": "What color would you want the background shape to be? Input a keyword or hex code.".magenta,
-        "name": "shape_color"
+        "name": "shape_color",
+        "default": "black"
     }
 ]
 

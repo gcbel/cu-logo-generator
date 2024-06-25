@@ -23,6 +23,9 @@ To generate a logo .svg file, this project can be run with the command `node ind
 
 ## Credits
 
+Reference for .svg shapes: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes <br>
+Reference for .svg text: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Texts
+
 ## License
 
 Please refer to the license in the repo.
