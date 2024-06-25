@@ -45,7 +45,7 @@ function createLogo (filename, responses) {
     let fontSize = 170 - (numChars * 30);
     let yIndex = 76 - (numChars * 4);
 
-    // Generate shape XML,if triangle change text position and size
+    // Generate shape XML, if triangle change text position and size
     let shape = ""
     if (responses.shape === "Square") {shape = new Square(responses.shape_color)}
     else if (responses.shape === "Circle") {shape = new Circle(responses.shape_color)}
@@ -55,12 +55,10 @@ function createLogo (filename, responses) {
         yIndex = 92 - (numChars * 2)
     } else {console.error("Please select a shape from the list!".red)};
 
-    logo = `
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-    ${shape.draw()}
+    logo = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    ${shape.render()}
     <text x="50%" y="${yIndex}%" text-anchor="middle" fill="${responses.text_color}" font-size="${fontSize}px">${responses.text}</text>
-</svg>
-`
+</svg>`
 
     writeFile(filename, logo, (err) => {
         err ? console.error(`Error: ${err}`) : console.log(`Success! Your logo is in logo.svg!`)

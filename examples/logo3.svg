@@ -1,0 +1,4 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="100,0 0,200 200,200" fill="steelblue"/>
+    <text x="50%" y="90%" text-anchor="middle" fill="seashell" font-size="115px">G</text>
+</svg>
