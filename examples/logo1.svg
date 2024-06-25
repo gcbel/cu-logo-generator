@@ -1,4 +1,4 @@
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="100" fill="lightblue"/>
-    <text x="50%" y="68%" text-anchor="middle" fill="black" font-size="110px">GB</text>
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="150" cy="100" r="100" fill="lightblue"/>
+    <text x="50%" y="72%" text-anchor="middle" fill="black" font-size="140px">G</text>
 </svg>

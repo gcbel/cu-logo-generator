@@ -13,7 +13,7 @@ const questions = [
     },
     {
         "type": "input",
-        "message": "What color would you like the logo text to be?".magenta,
+        "message": "What color would you like the logo text to be? Input a keyword or hex code.".magenta,
         "name": "text_color"
     },
     {
@@ -24,7 +24,7 @@ const questions = [
     },
     {
         "type": "input",
-        "message": "What color would you want the background shape to be?".magenta,
+        "message": "What color would you want the background shape to be? Input a keyword or hex code.".magenta,
         "name": "shape_color"
     }
 ]
@@ -55,7 +55,7 @@ function createLogo (filename, responses) {
         yIndex = 92 - (numChars * 2)
     } else {console.error("Please select a shape from the list!".red)};
 
-    logo = `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    logo = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     ${shape.render()}
     <text x="50%" y="${yIndex}%" text-anchor="middle" fill="${responses.text_color}" font-size="${fontSize}px">${responses.text}</text>
 </svg>`
