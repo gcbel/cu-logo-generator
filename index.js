@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const colors = require('colors');
 const {writeFile} = require('fs');
-import Shape from './shapes.js';
+const {Shape, Square, Circle, Triangle} = require('./lib/shapes.js');
 
 /* VARIABLES */
 const questions = [
@@ -14,7 +14,7 @@ const questions = [
     {
         "type": "input",
         "message": "What color would you like the logo text to be?".magenta,
-        "name": "text-color"
+        "name": "text_color"
     },
     {
         "type": "list",
@@ -25,7 +25,7 @@ const questions = [
     {
         "type": "input",
         "message": "What color would you want the background shape to be?".magenta,
-        "name": "shape-color"
+        "name": "shape_color"
     }
 ]
 
@@ -36,11 +36,26 @@ const questions = [
  * @param {object} data Information from user prompts
  */
 function createLogo (filename, responses) {
-    console.log(responses)
+    if (responses.text.length > 3 || responses.text.length === 0) {
+        console.error("Please select input text between 1 and 3 characters!".red)
+    }
 
-    const shape = new Circle;
+    let shape = ""
+    if (responses.shape === "Square") {shape = new Square(responses.shape_color)}
+    else if (responses.shape === "Circle") {shape = new Circle(responses.shape_color)}
+    else if (responses.shape === "Triangle") {shape = new Triangle(responses.shape_color)}
+    else {console.error("Please select a shape from the list!".red)};
 
-    writeFile(filename, shape.background);
+    logo = `
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <text x="100" y="100" fill="${responses.text_color}">${responses.text}</text>
+    ${shape.draw()}
+</svg>
+`
+
+    writeFile(filename, logo, (err) => {
+        err ? console.error(`Error: ${err}`) : console.log(`Success! Your logo is in logo.svg!`)
+    });
 }
 
 /* INITIALIZERS */
