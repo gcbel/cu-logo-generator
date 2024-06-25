@@ -2,11 +2,12 @@
 
 ## Description
 
-For this project, I created generator for a professional logo. The program prompts a user to input ... this project, I had the opportunity to practice using Node.js.
+In this project, I created logo generator. The program prompts a user to input desired styles for their logo, and outputs a corresponding .svg file. In this project, I had the opportunity to practice using object-oriented programming and Node.js.
 
-With a user's input in place of the samples, the completed README will follow this pattern:
+Here are three examples of completed logos:
 
-![Example README](assets/images/example_readme.png)
+| ![Logo 1](/assets/images/logo1.png) | ![Logo 2](/assets/images/logo2.png) | ![Logo 3](/assets/images/logo3.png) |
+|------------------------------------------|-------------------------------------------|------------------------------------------|
 
 ## Installation
 

@@ -31,9 +31,9 @@ const questions = [
 
 /* FUNCTIONS */
 /**
- * Generates text content for README file.
- * @param {string} fileName Name of file to input text
- * @param {object} data Information from user prompts
+ * Generates logo in given file.
+ * @param {string} fileName Name of file to input logo
+ * @param {object} responses Information from user prompts
  */
 function createLogo (filename, responses) {
     const numChars = responses.text.length;
@@ -66,7 +66,7 @@ function createLogo (filename, responses) {
 }
 
 /* INITIALIZERS */
-/* Initialize call for user input and readme creation */
+/* Initialize call for user input and logo creation */
 function init() {
     inquirer
         .prompt(questions)
