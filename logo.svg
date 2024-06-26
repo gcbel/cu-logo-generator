@@ -1,4 +1,4 @@
 <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     <circle cx="150" cy="100" r="100" fill="black"/>
-    <text x="50%" y="72%" text-anchor="middle" fill="white" font-size="140px">G</text>
+    <text x="50%" y="76%" text-anchor="middle" fill="white" font-size="170px"></text>
 </svg>
