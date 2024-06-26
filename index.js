@@ -40,31 +40,31 @@ const questions = [
 function createLogo (filename, responses) {
     const numChars = responses.text.length;
     if (numChars > 3 || numChars === 0) {
-        console.error("Please select input text between 1 and 3 characters!".red)
-    }
+        console.error("Please input between 1 and 3 characters for the logo text!".red)
+    } else {
+        // Calculations for text position and size
+        let fontSize = 170 - (numChars * 30);
+        let yIndex = 76 - (numChars * 4);
 
-    // Calculations for text position and size
-    let fontSize = 170 - (numChars * 30);
-    let yIndex = 76 - (numChars * 4);
+        // Generate shape XML, if triangle change text position and size
+        let shape = ""
+        if (responses.shape === "Square") {shape = new Square(responses.shape_color)}
+        else if (responses.shape === "Circle") {shape = new Circle(responses.shape_color)}
+        else if (responses.shape === "Triangle") {
+            shape = new Triangle(responses.shape_color)
+            fontSize = 145 - (numChars * 30);
+            yIndex = 92 - (numChars * 2)
+        } else {console.error("Please select a shape from the list!".red)};
 
-    // Generate shape XML, if triangle change text position and size
-    let shape = ""
-    if (responses.shape === "Square") {shape = new Square(responses.shape_color)}
-    else if (responses.shape === "Circle") {shape = new Circle(responses.shape_color)}
-    else if (responses.shape === "Triangle") {
-        shape = new Triangle(responses.shape_color)
-        fontSize = 145 - (numChars * 30);
-        yIndex = 92 - (numChars * 2)
-    } else {console.error("Please select a shape from the list!".red)};
-
-    logo = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        logo = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     ${shape.render()}
     <text x="50%" y="${yIndex}%" text-anchor="middle" fill="${responses.text_color}" font-size="${fontSize}px">${responses.text}</text>
 </svg>`
 
-    writeFile(filename, logo, (err) => {
-        err ? console.error(`Error: ${err}`) : console.log(`Success! Your logo is in logo.svg!`)
-    });
+        writeFile(filename, logo, (err) => {
+            err ? console.error(`Error: ${err}`) : console.log(`Success! Your logo is in logo.svg!`)
+        });
+    }
 }
 
 /* INITIALIZERS */
