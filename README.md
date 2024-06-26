@@ -9,7 +9,7 @@ Here are three examples of completed logos:
 | ![Logo 1](/assets/images/logo1.png) | ![Logo 2](/assets/images/logo2.png) | ![Logo 3](/assets/images/logo3.png) |
 |------------------------------------------|-------------------------------------------|------------------------------------------|
 
-[Here]() is a video elborating on the installation and usage instructions.
+[Here](https://drive.google.com/file/d/1i6D2hErEhiZ4kKh70GxU--XGlA6RvhEQ/view?usp=sharing) is a video elborating on the installation and usage instructions.
 
 ## Installation
 
