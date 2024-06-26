@@ -9,13 +9,15 @@ Here are three examples of completed logos:
 | ![Logo 1](/assets/images/logo1.png) | ![Logo 2](/assets/images/logo2.png) | ![Logo 3](/assets/images/logo3.png) |
 |------------------------------------------|-------------------------------------------|------------------------------------------|
 
+[Here]() is a video elborating on the installation and usage instructions.
+
 ## Installation
 
 The logo generator can be run locally by cloning this repository. 
 
 Once the repository has been cloned, the program will require Node.js. To check if you have previously installed Node.js, you can run `node --version`. If Node.js is installed, a version number will appear. If no version number appears, you can download the package [here](https://nodejs.org/en/download/package-manager).
 
-To download the package dependencies ([inquirer](https://www.npmjs.com/package/inquirer) and [colors](https://www.npmjs.com/package/colors)), run `npm install`.
+To download the package dependencies ([inquirer](https://www.npmjs.com/package/inquirer) and [colors](https://www.npmjs.com/package/colors)), run `npm install` or `npm i`.
 
 ## Usage
 
@@ -28,4 +30,4 @@ Reference for .svg text: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutori
 
 ## License
 
-Please refer to the license in the repo.
+MIT License
