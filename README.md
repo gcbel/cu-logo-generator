@@ -30,4 +30,4 @@ Reference for .svg text: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutori
 
 ## License
 
-MIT License
+[MIT License](https://opensource.org/license/mit)
